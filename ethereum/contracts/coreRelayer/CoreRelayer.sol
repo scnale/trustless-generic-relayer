@@ -21,7 +21,7 @@ contract CoreRelayer is CoreRelayerGovernance {
         payable
         returns (uint64 sequence)
     {
-        DeliveryRequest[] memory requests = new DeliveryRequest[](1);
+       DeliveryRequest[] memory requests = ((new DeliveryRequest[](1)));
         requests[0] = request;
         DeliveryRequestsContainer memory container = DeliveryRequestsContainer(1, address(provider), requests);
         return requestMultidelivery(container, nonce);
